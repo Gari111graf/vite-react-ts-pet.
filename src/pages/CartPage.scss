@@ -1,0 +1,25 @@
+.cart-page {
+  max-width: 500px;
+  margin: 40px auto;
+  padding: 20px;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  text-align: center;
+
+  h2 {
+    margin-bottom: 16px;
+    color: #007bff;
+  }
+
+  p {
+    margin-bottom: 20px;
+    font-weight: 500;
+  }
+
+  &__actions {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+  }
+}
