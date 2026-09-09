@@ -6,7 +6,7 @@ import { CartProvider, useCart } from "./context/CartContext";
 import Button from "./components/Button";
 import OrdersPage from "./pages/OrdersPage";
 import { OrdersProvider } from "./context/OrdersContext";
-
+import ProductsPage from "./pages/ProductsPage";
 function Home() {
   const { addItem } = useCart();
 
@@ -28,7 +28,8 @@ export default function App() {
       <Router>
         <Navbar />
         <Routes>
-          <Route path="/" element={<Home />} />
+                        <Route path="/" element={<Home />} />
+            <Route path="/products" element={<ProductsPage />} />    
                   <Route path="/cart" element={<CartPage />} />
             <Route path="/orders" element={<OrdersPage />} />
         </Routes>
