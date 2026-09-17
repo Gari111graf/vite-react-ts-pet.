@@ -15,6 +15,8 @@ const Navbar: React.FC = () => {
         <li><Link to="/products">Products</Link></li>
         <li><Link to="/music">Music</Link></li>
         <li><Link to="/cart">Cart ({items})</Link></li>
+        <li><Link to="/checkout">Checkout</Link></li>
+
       </ul>
       <div className="navbar__actions">
         <Link to="/cart">

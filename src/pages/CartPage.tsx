@@ -1,17 +1,18 @@
+import { useNavigate } from "react-router-dom";
 import React from "react";
 import { useCart } from "../context/CartContext";
-import Button from "../components/Button";
 import { useOrders } from "../context/OrdersContext";
+import Button from "../components/Button";
 import "./CartPage.scss";
 
 const CartPage: React.FC = () => {
-    const { items, clearCart } = useCart();
-     const { addOrder } = useOrders();
+  const { items, clearCart } = useCart();
+  const { addOrder } = useOrders();
+  const navigate = useNavigate();
 
   const checkout = () => {
     addOrder(items);
-    alert("🎉 Заказ оформлен!");
-    clearCart();
+    navigate("/checkout"); // редирект на страницу Checkout
   };
 
   return (
@@ -31,5 +32,4 @@ const CartPage: React.FC = () => {
     </div>
   );
 };
-
 export default CartPage;
