@@ -24,7 +24,7 @@ const CheckoutPage: React.FC = () => {
     alert(`🎉 Заказ оформлен!\nИмя: ${name}\nТелефон: ${phone}\nАдрес: ${address}`);
     clearCart();
 
-    // очистим форму
+    
     setName("");
     setPhone("");
     setAddress("");

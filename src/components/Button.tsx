@@ -1,11 +1,11 @@
 import React from "react";
-import "./Button.scss"; // стили для кнопки
+import "./Button.scss"; 
 
 type ButtonProps = {
-  children: React.ReactNode;       // текст или иконка внутри кнопки
-  onClick?: () => void;            // обработчик клика
-  type?: "button" | "submit";      // тип кнопки
-  variant?: "primary" | "secondary" | "danger"; // стилизация
+  children: React.ReactNode;       
+  onClick?: () => void;            
+  type?: "button" | "submit";      
+  variant?: "primary" | "secondary" | "danger"; 
 };
 
 const Button: React.FC<ButtonProps> = ({

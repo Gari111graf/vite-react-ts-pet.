@@ -1,30 +1,35 @@
 .products-page {
-  max-width: 600px;
+  max-width: 900px;
   margin: 40px auto;
   padding: 20px;
-  background: #fff;
-  border: 1px solid #ddd;
-  border-radius: 8px;
 
-  h2 {
-    margin-bottom: 16px;
-    color: #007bff;
-  }
-
-  ul {
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
     list-style: none;
     padding: 0;
-    button {
-      padding: 4px;
-      margin-left: 4px;
+  }
+
+  &__item {
+    flex: 0 0 22%; // 4 товара в ряд
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 12px;
+    text-align: center;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+
+    span {
+      display: block;
+      margin: 10px 0;
+      font-weight: 500;
     }
-    &__item {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-bottom: 12px;
-      padding: 8px;
-      border-bottom: 1px solid #eee;
-    }
+  }
+
+  &__img {
+    width: 50%;
+    height: auto;
+    border-radius: 6px;
   }
 }

@@ -1,24 +1,39 @@
 .slider {
   text-align: center;
-  padding: 20px;
-  background: #f1f1f1;
-  border-radius: 8px;
-  margin: 20px auto;
-  max-width: 400px;
+  margin-top: 20px;
 
-  h2 {
-    margin-bottom: 8px;
-    color: #007bff;
+  &__track {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap; // позволяет переносить элементы на новую строку
   }
 
-  p {
-    margin-bottom: 16px;
-    color: #333;
+  .slide {
+    flex: 0 0 22%; // примерно 4 карточки в ряд (с учётом gap)
+    max-width: 250px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 8px;
+    padding: 10px;
+    background: #fff;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+
+    img {
+      width: 100%;
+      border-radius: 8px;
+    }
+
+    &.active {
+      transform: scale(1.1);
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+    }
   }
 
   &__actions {
+    margin-top: 15px;
     display: flex;
     justify-content: center;
-    gap: 12px;
+    gap: 10px;
   }
 }
